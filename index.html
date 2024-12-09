@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+        }
+
+        header {
+            width: 100%;
+            height: 6.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: blue;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav {
+            flex: 1;
+        }
+
+        .login {
+            text-align: center;
+            flex: 1;
+        }
+
+        .logo {
+            text-align: center;
+            flex: 1;
+        }
+
+        ul li a:hover {
+            border: 1px solid red;
+            color: black;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .login a:hover {
+            border: 1px solid red;
+            color: black;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .logo :hover {
+            border: 1px solid red;
+            color: black;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        nav ul li:is(.home, .contact, .about, .services, ) {
+            background-color: orange;
+        }
+
+        .dropdown {
+            background-color: aliceblue;
+            position: absolute;
+            top: 150%;
+            left: 5%;
+            display: none;
+        }
+
+        .dropdown a {
+            color: black;
+        }
+
+        .home {
+            position: relative;
+
+        }
+
+        .home:hover .dropdown {
+            display: block;
+        }
+
+        .about {
+            position: relative;
+
+        }
+
+        .about:hover .dropdown {
+            display: block;
+        }
+
+        .services {
+            position: relative;
+
+        }
+
+        .services:hover .dropdown {
+            display: block;
+        }
+
+        .contact {
+            position: relative;
+
+        }
+
+        .contact:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">my brand</div>
+        <nav>
+            <ul>
+                <li class="home"><a href="">home</a>
+                    <div class="dropdown">
+                        <a href="#">link1</a>
+                        <a href="#">link2</a>
+                        <a href="#">link3</a>
+                    </div>
+                </li>
+                <li class="about"><a href="#">about</a>
+                    <div class="dropdown">
+                        <a href="#">link1</a>
+                        <a href="#">link2</a>
+                        <a href="#">link3</a>
+                    </div>
+                </li>
+                <li class="services"><a href="#">services</a>
+                    <div class="dropdown">
+                        <a href="#">link1</a>
+                        <a href="#">link2</a>
+                        <a href="#">link3</a>
+                    </div>
+                </li>
+                <li class="contact"><a href="#">contact</a>
+                    <div class="dropdown">
+                        <a href="#">link1</a>
+                        <a href="#">link2</a>
+                        <a href="#">link3</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="login">
+            <a class="btn" href="#">login</a>
+        </div>
+
+    </header>
+
+</body>
+
+</html>
